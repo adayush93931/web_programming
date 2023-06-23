@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Random Number Generator</title> 
+    <style>         #container {             padding: 100px;             color: chartreuse;             background-color: blue; 
+            text-align: center; 
+        } 
+    </style> 
+</head> 
+<body style="text-align: center; font-size: 20px;"> 
+    <div id="container"> 
+        <h1> Random Number Generator </h1> 
+        Enter the upper bound: <input id="num"> 
+        <br><br> 
+        <button onclick="randnum()"> Click </button> 
+        <p id="res"></p> 
+    </div>     <script> 
+        function randnum() { 
+            num = document.getElementById("num").value;   
+                      let f = Math.floor(Math.random() * num); 
+
+            document.getElementById("res").innerHTML = "Random Number = " + f;          
+               console.log(f); 
+               
+        }   
+    </script> </body> 
+</html> 

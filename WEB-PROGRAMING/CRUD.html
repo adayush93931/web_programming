@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CRUD</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        </head>
+    <body>
+       <center>
+         <h1>
+        <span style="text-transform:uppercase">
+            crud
+        </span>
+         </h1>
+       </center>
+       <div>
+        <h4>NAME</h4>
+        <input type="text" id="name" placeholder="NAME" ></div>
+                
+        <div>
+        <h4>CLASS</h4>
+        <input type="text" id="class" placeholder="CLASS"></div>
+                
+        <div>
+        <h4>ROOL NO.</h4>
+        <input type="text" id="rool" placeholder="ROOL NO."></div>
+                
+        <div>
+        <h4>section</h4>
+        <input type="text" id="section" placeholder="SECTION"></div>
+        <br>                
+        <div>
+       <center> <button id="submit" onclick="call()">SUBMIT</button></center></div>
+        <br>  
+        <hr>              
+        <div>
+        <h4>name</h4>
+        <input type="text" id="x" readonly="">
+        
+        <h4>class</h4>
+        <input type="text" id="y" readonly="">
+        
+        <h4>rool no.</h4>
+        <input type="text" id="z" readonly="">
+        
+        <h4>section</h4>
+        <input type="text" id="l" readonly="">
+        </div>
+                 <script type="text/javascript">
+                alert("student entery");
+                function call() {
+                    var a = document.getElementById("name").value;
+                    alert(a);
+                    var b = document.getElementById("class").value;
+                    alert(b);
+                    var c = document.getElementById("rool").value;
+                    alert(c);
+                    var d = document.getElementById("section").value;
+                    alert(d);
+                     document.getElementById("x").value = a;
+                     document.getElementById("y").value = b;
+                     document.getElementById("z").value = c;
+                     document.getElementById("l").value = d;                    
+                }
+                
+              </script>
+    </body>
+</html>

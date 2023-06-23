@@ -1,0 +1,94 @@
+<html> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Calculator</title> 
+<style>     #container{         padding: 100px; 
+        margin-top: 100px;   
+              margin-left: 400px; 
+                      margin-right: 400px; 
+                              background-color:cornsilk; 
+                                      text-align: center;  
+                                             display:flex; 
+        flex-direction: column; 
+    } 
+    #button{ 
+        background-color:blue; 
+                color:white;  
+                       border-radius: 10px;     
+                           border: 1px; 
+        margin-top: 15px;  
+    } 
+</style> 
+</head> 
+<body> 
+    <div id = "container"> 
+    <h1>UNIT CONVERTOR</h1> 
+    <b> Base Unit: </b> 
+    <select name="model" id="Temp"> 
+        <option value="F">Fahrenheit</option> 
+        <option value="K">Kelvin</option> 
+        <option value="C">Celsius</option>     </select> 
+    Value: <input id="num"> 
+    <b> Final Unit: </b> 
+     
+    <select name="model" id="Temp2"> 
+        <option value="F">Fahrenheit</option> 
+        <option value="K">Kelvin</option> 
+        <option value="C">Celsius</option>     </select> 
+    <button type="button" id = "button" onclick=" checkButton()"> Submit </button>   
+      <h3 id="disp" style="color:black"> </h3> 
+    <h4 id="error" style="color:red"> </h4> 
+</div> 
+</body> 
+<script> 
+    function checkButton() { 
+        let x = document.getElementById('Temp').value ;   
+              let y = document.getElementById('Temp2').value ; 
+        console.log(x);         console.log(y); 
+        let value = document.getElementById('num').value; 
+        if(x == 'F'&& y == 'C'){             console.log(value); 
+                        value = (Number(value)-32)/1.8; 
+            document.getElementById("disp").innerHTML = value + " " +y; 
+        } 
+        else if(x == 'F'&& y == 'K'){             console.log(value); 
+            value = (Number(value)-32)/1.8 + 273.15; 
+            document.getElementById("disp").innerHTML = value+ " " +y; 
+        } 
+        else if(x == 'F'&& y == 'F'){ 
+            console.log(value); 
+            document.getElementById("disp").innerHTML = value+ " " +y; 
+        } 
+        else if(x == 'C'&& y == 'C'){ 
+            console.log(value); 
+            document.getElementById("disp").innerHTML = value + " " +y; 
+        } 
+        else if(x == 'C'&& y == 'K'){             console.log(value);   
+                      value = Number(value) + 273.15;          
+                         console.log(value); 
+            document.getElementById("disp").innerHTML = value + " " +y; 
+        } 
+        else if(x == 'C'&& y == 'F'){             console.log(value);    
+                     value = Number(value)*1.8+32; 
+            document.getElementById("disp").innerHTML = value + " " +y; 
+        } 
+        else if(x == 'K'&& y == 'C'){             console.log(value);   
+                      value = Number(value)-273.15; 
+            document.getElementById("disp").innerHTML = value+ " " +y; 
+        } 
+        else if(x == 'K'&& y == 'K'){ 
+            console.log(value); 
+            document.getElementById("disp").innerHTML = value+ " " +y; 
+        } 
+        else if(x == 'K'&& y == 'F'){             console.log(value); 
+            value = (Number(value)-273.15)*1.8+32; 
+            document.getElementById("disp").innerHTML = value + " " +y;         } 
+        else {             console.log(value); 
+            document.getElementById("error").innerHTML 
+                = "You have not selected any season"; 
+        } 
+    }    
+</script> 
+</html>
+ 

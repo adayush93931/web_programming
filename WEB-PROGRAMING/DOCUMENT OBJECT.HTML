@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Document's Properties</title> 
+    <style>         h1 { 
+            color: green; 
+        } 
+    </style> </head> 
+<body> 
+    <h1> Document Object</h1> 
+    <button onclick="myFunction()">CLICK ME</button>     <p id="demo"></p> 
+    <script> 
+        function myFunction() { 
+            var title = document.title;             var domain = document.domain;             var body = document.body; 
+            document.getElementById("demo").innerHTML = 
+                "the title of the document is : " 
+                + title 
+                + "<br>" 
+                + "domain : " 
+                + domain 
+                + "<br>" 
+                + "body : " 
+                + body; 
+        } 
+    </script> </body> 
+</html> 

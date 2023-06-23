@@ -1,0 +1,27 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title> Window's Properties</title> 
+    <style>         h1 { 
+            color: green; 
+        } 
+    </style> </head> 
+<body> 
+    <h1>Window Object</h1> 
+    <button onclick="show()">Check</button> 
+    <p id="prop"></p> 
+    <script>         function show() { 
+            var h = window.innerHeight;             var w = window.innerWidth;             var l = window.location;             var c = window.closed; 
+            document.getElementById("prop").innerHTML = 
+                "Frame's Height: " 
+                + h + "<br>" 
+                + "Frame's Width: " 
+                + w + "<br>" 
+                + "Window location:" 
+                + l 
+                + "<br>" 
+                + "Window Closed: " 
+                + c; 
+        } 
+    </script> </body> 
+</html> 
